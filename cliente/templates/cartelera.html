@@ -1,0 +1,18 @@
+    
+    <h1><strong>{{nombreCine}}</strong></h1>
+    <div class="container" >    
+      <div class="row"  >
+        <div class="col-sm-4 bb"  ng-repeat="pelicula in peliculas">
+          <div class="panel panel-primary" >
+            <div class="panel-heading">{{pelicula.nombre}}</div>
+            <div class="panel-body " ><img ng-src="{{pelicula.imagen}}" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">{{pelicula.lenguaje}}</div>
+          </div>
+        </div>
+        
+      </div>
+    </div><br>
+    
+    
+    
+ 

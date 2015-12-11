@@ -1,0 +1,35 @@
+{
+  "name": "cineudea",
+  "version": "1.0.0",
+  "description": "Proyecto de la materia arquitectura de software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cposada23/cineudea.git"
+  },
+  "keywords": [
+    "node",
+    "mongo",
+    "angular",
+    "express",
+    "arquitectura",
+    "de",
+    "software"
+  ],
+  "author": "CineUdeA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cposada23/cineudea/issues"
+  },
+  "homepage": "https://github.com/cposada23/cineudea#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongodb": "^2.1.0",
+    "path": "^0.12.7"
+  }
+}

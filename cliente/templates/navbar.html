@@ -1,0 +1,13 @@
+ <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="navController as tab">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Libreria</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li ng-class="{ active: tab.isSet(1) }"><a ui-sref="Home" ng-click="setTab(1)">Home</a></li>
+            <li ng-class="{ active: tab.isSet(2) }"><a ui-sref="Cartelera" ng-click="setTab(2)">Cartelera</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>

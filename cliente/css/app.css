@@ -1,0 +1,28 @@
+.a{
+    padding: 30px 30px 30px 30px;  
+}
+
+.b{
+    padding-top:50px;
+}
+
+.im{
+    width: 20px;
+    height: 20px;
+}
+
+body{
+    
+     background-image: url("../img/robot.jpg") ;
+     background-attachment: fixed ;
+}
+
+.aa{
+    
+    opacity: 0.5;
+}
+
+.bb{
+    
+    opacity:0.8;
+}
