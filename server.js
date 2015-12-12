@@ -11,6 +11,7 @@ var app = express();
 var ctrlCartelera = require('./servidor/controladores/ctrlCartelera'); //Para operaciones con la cartelera
 var peliculaCtrl = require("./servidor/controladores/peliculaCtrl"); //Operaciones de insersión, edición de una nueva pelicula
 var cineCtrl = require("./servidor/controladores/cinemasCtrl");
+var usuariCtrl = require("./servidor/controladores/usuarioCtrl");
 app.use(bodyParser.json());
 /*-- Directorios Estaticos --*/
 app.use('/cliente', express.static(__dirname + "/cliente")); 
@@ -25,6 +26,9 @@ app.get('/', function (req, res) {
 app.post('/api/cartelera/listar',ctrlCartelera.listarCartelera); //Listo la cartelera 
 app.get('/api/cines/listar', cineCtrl.listarCinemas); //Listar cines 
 app.post('/api/pelicula/get', peliculaCtrl.obtenerPelicula);  //Obtener una pelicula con el id
+
+//autenticacion
+app.post('/api/usuario/login', usuariCtrl.login);
 
 /*-- Corro el servidor --*/
 
