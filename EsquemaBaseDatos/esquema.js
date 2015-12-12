@@ -74,14 +74,11 @@ sala: {
     "numero": Number,
     "cinema": string,
     "programacion": string,
-    "defaultSillas": {
-        "filas": [{
-            "nombre": string,
-            "numeros": [{
-                "numero": Number
-            }]
-        }]
-    }
+    "Sillas": [{
+        fila:String
+        numero:String
+        
+    }]
 }
 
 cinema: {

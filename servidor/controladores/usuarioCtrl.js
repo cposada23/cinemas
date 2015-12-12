@@ -17,7 +17,8 @@ module.exports.login = function (req,res) {
         correo: email,
         password: _password
       },{
-          nombres:1
+          nombres:1,
+          id:1
       }).toArray(function(err, docs) {
         if (err) throw err;
         
@@ -26,14 +27,14 @@ module.exports.login = function (req,res) {
         if(usuario!=undefined){
             var log={
                 auth: 1,
-                nombre: usuario.nombres
+                nombre: usuario.nombres,
+                id:usuario.id
             }
             
         }else{
             var log={
                 auth:0,
                 nombre:"Error"
-            
             }
             
         }

@@ -30,8 +30,9 @@
       $scope.setCartelera = function (cine) {
         localStorage.setItem('cartelera', cine.cartelera);
         localStorage.setItem('nombreCine', cine.nombre);
-        console.log("Carteleraaa " + cine.cartelera);
-        console.log("Cine " + cine.nombre);
+        console.log("Carteleraaa en set cartelera" + cine.cartelera);
+        console.log("Cine en ser cartelera" + cine.nombre);
+        $state.go('Cartelera');
       }
       
     
@@ -53,6 +54,7 @@
           localStorage.setItem('User-Data' ,  JSON.stringify(response));
           $scope.User.email ="";
           $scope.User.password="";
+         
           $scope.loggedIn = true;
           
         }).error(function (error) {

@@ -1,5 +1,5 @@
 <!-- Page Content -->
-<div class="container">
+<div class="container col-sm-offset-3">
 
   
     <div class="row">
@@ -10,7 +10,7 @@
         </div>
     </div>
    
-    <div class="row">
+    <div class="row ">
 
         <div class="col-md-4 ">
             <img class="img-responsive" ng-src="{{pelicula.imagen}}" alt="">
@@ -21,14 +21,16 @@
             <p>{{pelicula.descripcion}}</p>
             <h3>Detalles</h3>
             <ul>
-                <li>Lorem Ipsum</li>
-                <li>Dolor Sit Amet</li>
-                <li>Consectetur</li>
-                <li>Adipiscing Elit</li>
+                <li> Formato : {{pelicula.formato}}</li>
+                <li>Lenguaje: {{pelicula.lenguaje}}</li>
+                <li>Genero : {{pelicula.genero}}</li>
+                <li>Pais : {{pelicula.pais}}</li>
+                <li>Censura:{{pelicula.censura}}</li>
+   
             </ul>
         </div>
 
-    </div>
+    </div><br>
     
     <div class="row">
 
@@ -36,24 +38,24 @@
             <h3 class="page-header">Peliculas Relacionadas</h3>
         </div>
 
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
+     
 
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
+        
     </div>
     <!-- /.row -->
 
+
+    <div class="row">
+      
+        
+         <div >
+            <iframe  width="50%" height="400"
+        src='{{pelicula.trailer}}'>
+      </iframe>
+        </div>
+        
+         
+       
+
+    </div>
     <hr>
