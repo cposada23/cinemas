@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
 
 app.post('/api/cartelera/listar',ctrlCartelera.listarCartelera); //Listo la cartelera 
 app.get('/api/cines/listar', cineCtrl.listarCinemas); //Listar cines 
-
+app.post('/api/pelicula/get', peliculaCtrl.obtenerPelicula);  //Obtener una pelicula con el id
 
 /*-- Corro el servidor --*/
 

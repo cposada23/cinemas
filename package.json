@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cposada23/cineudea.git"
+    "url": "git+https://github.com/cposada23/cinemas.git"
   },
   "keywords": [
     "node",
@@ -23,9 +23,9 @@
   "author": "CineUdeA",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cposada23/cineudea/issues"
+    "url": "https://github.com/cposada23/cinemas/issues"
   },
-  "homepage": "https://github.com/cposada23/cineudea#readme",
+  "homepage": "https://github.com/cposada23/cinemas#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",

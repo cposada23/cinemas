@@ -15,6 +15,7 @@ body{
     
      background-image: url("../img/robot.jpg") ;
      background-attachment: fixed ;
+     opacity:0.8;
 }
 
 .aa{
@@ -25,4 +26,25 @@ body{
 .bb{
     
     opacity:0.8;
+}
+
+.h1b{
+    
+    color:#F8F8FF;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.sinopsis{
+    color:#F8F8FF;
+}
+
+.blanco{
+    color:#F8F8FF;
 }

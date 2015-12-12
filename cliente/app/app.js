@@ -3,8 +3,7 @@
     //configuracion de la app
     app.config(function($stateProvider, $urlRouterProvider){
         //default
-        $urlRouterProvider.otherwise('Home');
-        
+        $urlRouterProvider.otherwise('home');
         
         $stateProvider
         .state('Home',{
@@ -16,6 +15,11 @@
             url:"/cartelera",
             templateUrl: "cliente/templates/cartelera.html",
             controller:"carteleraCtrl"
+        })
+        .state('Pelicula',{
+            url:"/pelicula",
+            templateUrl: "cliente/templates/pelicula.html",
+            controller:"peliculaController"
         });
     });
 }());

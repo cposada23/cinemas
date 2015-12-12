@@ -21,7 +21,6 @@
         localStorage.setItem('nombreCine', cine.nombre);
         console.log("Carteleraaa " + cine.cartelera);
         console.log("Cine " + cine.nombre);
-       
       }
   }]);
 }());
