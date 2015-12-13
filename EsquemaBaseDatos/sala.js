@@ -21,6 +21,24 @@ var salas= [{
         numero:12
     }]    
     
+},{
+    id: "sbp-02",
+    numero: 1,
+    cinema: "ci-01",
+    programacion: "pgsbp-02",
+    Sillas: [{
+        fila:"j",
+        numero:10
+    },
+    {
+        fila:"j",
+        numero:11
+    },
+    {
+        fila:"j",
+        numero:12
+    }]    
+    
 },
 {
     id: "sm-01",
@@ -42,10 +60,48 @@ var salas= [{
     
 },
 {
+    id: "sm-02",
+    numero: 1,
+    cinema: "ci-02",
+    programacion: "pgm-02",
+    Sillas: [{
+        fila:"j",
+        numero:10
+    },
+    {
+        fila:"j",
+        numero:11
+    },
+    {
+        fila:"j",
+        numero:12
+    }]    
+    
+},
+{
     id: "spr-01",
     numero: 1,
     cinema: "ci-03",
     programacion: "pgpr-01",
+    Sillas: [{
+        fila:"j",
+        numero:10
+    },
+    {
+        fila:"j",
+        numero:11
+    },
+    {
+        fila:"j",
+        numero:12
+    }]    
+    
+},
+{
+    id: "spr-02",
+    numero: 1,
+    cinema: "ci-03",
+    programacion: "pgpr-02",
     Sillas: [{
         fila:"j",
         numero:10
