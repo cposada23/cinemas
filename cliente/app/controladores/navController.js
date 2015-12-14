@@ -27,14 +27,7 @@
         return $scope.tab === tabName;
       };
       
-      $scope.setCartelera = function (cine) {
-        localStorage.setItem('cartelera', cine.cartelera);
-        localStorage.setItem('nombreCine', cine.nombre);
-        console.log("Carteleraaa en set cartelera" + cine.cartelera);
-        console.log("Cine en ser cartelera" + cine.nombre);
-        $state.go('Cartelera');
-      }
-      
+     
     
       
       $scope.login= function () {

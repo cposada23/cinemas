@@ -12,14 +12,20 @@
             controller:"homeCtrl"
         })
         .state('Cartelera',{
-            url:"/cartelera",
+            url:"/cartelera/:cineNombre/:carteleraID",
             templateUrl: "cliente/templates/cartelera.html",
             controller:"carteleraCtrl"
         })
+        .state('Registrarse',{
+            url:"/registrarse/",
+            templateUrl: "cliente/templates/registro.html",
+            controller:"registroController.js"
+        })
         .state('Pelicula',{
-            url:"/pelicula",
+            url:"/pelicula/:peliculaID",
             templateUrl: "cliente/templates/pelicula.html",
             controller:"peliculaController"
         });
     });
 }());
+

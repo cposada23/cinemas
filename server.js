@@ -12,6 +12,7 @@ var ctrlCartelera = require('./servidor/controladores/ctrlCartelera'); //Para op
 var peliculaCtrl = require("./servidor/controladores/peliculaCtrl"); //Operaciones de insersión, edición de una nueva pelicula
 var cineCtrl = require("./servidor/controladores/cinemasCtrl");
 var usuariCtrl = require("./servidor/controladores/usuarioCtrl");
+var registroCtrl=require("./servidor/controladores/registroCtrl");
 app.use(bodyParser.json());
 /*-- Directorios Estaticos --*/
 app.use('/cliente', express.static(__dirname + "/cliente")); 
@@ -29,6 +30,10 @@ app.post('/api/pelicula/get', peliculaCtrl.obtenerPelicula);  //Obtener una peli
 
 //autenticacion
 app.post('/api/usuario/login', usuariCtrl.login);
+
+//Registro
+//app.post('/api/registro/consultar',registroCtrl.consultar);// Se garantiza la unicidad de usuarios
+//app.post('/api/registro/consultar',registroCtrl.registrar);//Se hace el registro de usuario
 
 /*-- Corro el servidor --*/
 

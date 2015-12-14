@@ -2,10 +2,10 @@
     var app = angular.module('cineUdea');
    
     
-    app.controller('carteleraCtrl', ['$scope', '$state', '$http', function($scope, $state, $http){
+    app.controller('carteleraCtrl', ['$scope', '$state', '$http','$stateParams', function($scope, $state, $http,$stateParams){
         
         
-        $scope.cartelera = localStorage.getItem('cartelera');
+       
         
         $scope.$watch('cartelera' ,  function function_name(argument) {
             console.log("cartelera ha cambiado "  + $scope.cartelera);
@@ -13,10 +13,13 @@
         
          
         $scope.$watch(localStorage.getItem('cartelera'), function(){
-            $scope.id = {
-                id:localStorage.getItem('cartelera')
+            
+            
+             $scope.id = {
+                id:$stateParams.carteleraID
             };
-            $scope.nombreCine = localStorage.getItem('nombreCine');
+           
+             $scope.nombreCine =$stateParams.cineNombre ;
             console.log("viewcontentloaded .....................");
             $http.post('/api/cartelera/listar',$scope.id).success(function(response) {
                 console.log("response de carteleras " + JSON.stringify(response));
@@ -28,11 +31,7 @@
             });
         });
         
-        $scope.setPelicula = function (pelicula) {
-            console.log(JSON.stringify(pelicula));
-            console.log("id:" + pelicula.id);
-            localStorage.setItem('idpelicula', pelicula.id);
-        }
+        
     
         
     }]);

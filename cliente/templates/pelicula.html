@@ -26,6 +26,7 @@
                 <li>Genero : {{pelicula.genero}}</li>
                 <li>Pais : {{pelicula.pais}}</li>
                 <li>Censura:{{pelicula.censura}}</li>
+                <li>Trailer:{{pelicula.trailer}}</li>
    
             </ul>
         </div>
@@ -34,32 +35,17 @@
     
     <div class="row">
 
-        <div class="col-lg-8">
-            <h3 class="page-header">Peliculas Relacionadas</h3>
+        <div class="col-lg-8 blanco">
+            <h3 class="page-header">Trailer</h3>
         </div>
-
-     
-
-        
     </div>
     <!-- /.row -->
-
+    
+    <div class="row">
+        <div class="col-md-8 " >
+          <iframe  width="100%" height="350" ng-src="{{url}}"></iframe>
+        </div>
+    </div>
 
     <div class="row">
       
-        
-         <div class="col-sm-4 col-xs-3">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-        
-         <div class="col-sm-4 col-xs-3">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-       
-
-    </div>
-    <hr>
