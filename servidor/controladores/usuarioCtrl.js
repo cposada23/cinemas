@@ -2,14 +2,12 @@
 
 var mongo = require('mongodb').MongoClient; //coneccion a la base de datos 
 var url = 'mongodb://cineudea:1234@ds027335.mongolab.com:27335/cineudeadb'// URL de la base de datos almacenada en mongolab.com
-
 module.exports.login = function (req,res) {
     console.log("login...");
     var email = req.body.email;
     var _password = req.body.password;
     console.log("obteniendo Usuario---" + email + " " + _password);
-    
-     mongo.connect(url, function(err, db) {
+    mongo.connect(url, function(err, db) {
       if (err) throw err
       var usuarios = db.collection('usuario');
       console.log("Buscando la collection...");
@@ -20,6 +18,7 @@ module.exports.login = function (req,res) {
           nombres:1,
           id:1
       }).toArray(function(err, docs) {
+        
         if (err) throw err;
         
         var usuario = docs[0];
@@ -30,17 +29,22 @@ module.exports.login = function (req,res) {
                 nombre: usuario.nombres,
                 id:usuario.id
             }
-            
         }else{
             var log={
                 auth:0,
                 nombre:"Error"
             }
-            
         }
         db.close();
         res.json(log); 
       });
     });
+};
+
+module.exports.registro = function (req, res) {
+    console.log("registrando usuario");
+    console.log(res);
+    var user = req.body.usuario;
+    console.log(JSON.stringify(user));
+    res.json(user);
 }
-;

@@ -15,11 +15,11 @@
         $scope.$watch(localStorage.getItem('cartelera'), function(){
             
             
-             $scope.id = {
+            $scope.id = {
                 id:$stateParams.carteleraID
             };
            
-             $scope.nombreCine =$stateParams.cineNombre ;
+            $scope.nombreCine =$stateParams.cineNombre ;
             console.log("viewcontentloaded .....................");
             $http.post('/api/cartelera/listar',$scope.id).success(function(response) {
                 console.log("response de carteleras " + JSON.stringify(response));

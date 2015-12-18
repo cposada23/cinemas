@@ -16,10 +16,10 @@
             templateUrl: "cliente/templates/cartelera.html",
             controller:"carteleraCtrl"
         })
-        .state('Registrarse',{
-            url:"/registrarse/",
+        .state('Registro',{
+            url:"/registro",
             templateUrl: "cliente/templates/registro.html",
-            controller:"registroController.js"
+            controller:"registroController"
         })
         .state('Pelicula',{
             url:"/pelicula/:peliculaID",

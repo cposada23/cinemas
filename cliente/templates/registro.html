@@ -1,9 +1,86 @@
-<div>
-<form ng-submit="submit()" >
- Ingrese su documento :
-  <input type="text" ng-model="documento" name="documento" aling="middle" />
-  <input type="submit" id="submit" value="Submit" />
- 
-</form>
+
+<div class="col-sm-8 col-sm-offset-2 blanco" >
+      <!-- review form -->
+<form name="registroForm"  ng-submit=" addUser()" novalidate>
+  <h4>REGISTRO</h4>
+  
+  <fieldset class="form-group">
+    <input type="text"   class="form-control" name="nombre" ng-model="nuevo.nombre" placeholder="Nombre" ng-model-options="{ updateOn: 'blur' }" required/>
+   
     
+  </fieldset> 
+  
+  <fieldset class="form-group">
+    <input type="text"  class="form-control"  name="apellidos" ng-model="nuevo.apellidos" placeholder="Apellidos" ng-model-options="{ updateOn: 'blur' }" required/>
+  </fieldset>
+  
+   <fieldset class="form-group">
+    <input type="number"   class="form-control" name="doc" ng-model"nuevo.documento" placeholder="Nro de Documento" min="5" max="16" ng-model-options="{ updateOn: 'blur' }"  required/>
+    <label>Tipo Documento</label>
+     <select  name="tipo"  class="form-control"  id="tipo"
+      ng-options="tipo for  tipo in tipoDoc"
+      ng-model="nuevo.tipoDoc" required></select>
+    </select>
+  </fieldset>
+  
+
+
+  
+  <fieldset class="form-group">
+    <label for="">Genero: </label>
+    <select name="genero"  class="form-control"  id="genero"
+      ng-options="genero for genero in generos"
+      ng-model="nuevo.genero" required></select>
+   <!-- <select ng-model="nuevo.sexo"  class="form-control" ng-options="s fo s in generos" title="generos" required>-->
+     
+     
+     
+     
+    </select>
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <input type="email" class="form-control" ng-model="nuevo.email" placeholder="e-mail:  aaa@example.com" title="Email" ng-model-options="{ updateOn: 'blur' }" required />
+  </fieldset>
+  
+  <fieldset class="form-group"> 
+    <input type="password" name="contrasena"  class="form-control" ng-model="nuevo.password" placeholder="Contraseña"  ng-model-options="{ updateOn: 'blur' }" required />
+  </fieldset>
+  
+  
+  <fieldset class="form-group">
+    <input type="text" name="municipoo"  class="form-control" ng-model="nuevo.municipio" placeholder="Municipio" ng-model-options="{ updateOn: 'blur' }"  />
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <input type="text" name="barrio"  class="form-control" ng-model="nuevo.barrio" placeholder="Barrio" ng-model-options="{ updateOn: 'blur' }" />
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <input type="text" name="direcci"  class="form-control" ng-model="nuevo.direccion" placeholder="Direccion" ng-model-options="{ updateOn: 'blur' }" />
+  </fieldset>
+  
+  
+  <fieldset class="form-group">
+    Fecha nacimiento: <input type="date" ng-model="nuevo.fechaNacimiento"   class="form-control" name="nuevo.cumpleanios" step="1"  value="2013-01-01"  ng-model-options="{ updateOn: 'blur' }" required>
+  </fieldset>
+  
+  
+  <fieldset class="form-group">
+    <input type="number"   class="form-control" name="celular" ng-model="nuevo.celular" value="000000000" placeholder="Nro Celular" required ng-model-options="{ updateOn: 'blur' }" min="5" max="20" />
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <input type="text"  class="form-control" name="genero" ng-model="nuevo.generoPelicula" placeholder="Genero de pelicula favorito" ng-model-options="{ updateOn: 'blur' }" />
+  </fieldset>
+  
+   
+  <fieldset class="form-group">
+    <div>reviewForm is {{reviewForm.$valid}}</div>
+    <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+  </fieldset>
+  
+  
+</form>
 </div>
+

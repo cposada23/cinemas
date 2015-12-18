@@ -29,12 +29,12 @@
                  <li ng-repeat="cine in cines"><a ui-sref="Cartelera({cineNombre:cine.nombre ,carteleraID:cine.cartelera })">{{cine.nombre}}</a></li>
               </ul>
             </li>
-            <li ng-class="{ active: tab.isSet(1) }"><a ui-sref="Registrarse" ng-click="registrarse()">Registrarse</a></li>
           </ul>
           
     
           
           <ul class="nav navbar-nav navbar-right">
+            <li ng-show="!loggedIn"><a ui-sref="Registro" >Registrarse</a></li>
             <li ng-show="!loggedIn" class="dropdown">
               <a ng-click="setTab(2)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Login <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -43,7 +43,8 @@
                 <button ng-click="login()">Login</button>
               </ul>
             </li>
-            <li ng-show="loggedIn"><a ng-click="logout()">Logout</a></li>
+            <li ng-show="loggedIn">Bienvenido {{nombre}}</li>
+            <li ng-show="loggedIn"><a ng-click="logout()"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
           </ul>
         </div>
       </div>
@@ -59,14 +60,14 @@
     <!-- Para cargar el contenido dinamico -->
     <div  ui-view class="b"></div>
     
-    <footer class="container-fluid text-center">
+   <!-- <footer class="container-fluid text-center">
       <p>Cinemas U de A</p>  
       <form class="form-inline"><strong>Suscribete: </strong>
         <input type="email" class="form-control" size="50" placeholder="Email">
         <button type="button" class="btn btn-danger">Sign Up</button>
       </form>
     </footer>
-    
+    -->
     
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -76,13 +77,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
     <!-- uirouter -->
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-   
+  
     <!-- script app -->
     <script type="text/javascript" src="cliente/app/app.js"></script>
+     <script type="text/javascript" src="cliente/app/controladores/registroController.js"></script>
     <script type="text/javascript" src="cliente/app/controladores/navController.js"></script>
     <script type="text/javascript" src="cliente/app/controladores/carteleraCtrl.js"></script>
     <script type="text/javascript" src="cliente/app/controladores/homeCtrl.js"></script>
     <script type="text/javascript" src="cliente/app/controladores/peliculaController.js"></script>
-    <script type="text/javascript" src="cliente/Js/ng-youtube-embed.min.js"></script>
+   
   </body>
 </html>

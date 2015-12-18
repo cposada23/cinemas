@@ -2,8 +2,8 @@
 
 /*--- DEPENDENCIAS ---*/
 var express = require("express"),
-  bodyParser = require("body-parser"),
-  path = require("path");
+    bodyParser = require("body-parser"),
+    path = require("path");
 
 var app = express();
 
@@ -11,8 +11,8 @@ var app = express();
 var ctrlCartelera = require('./servidor/controladores/ctrlCartelera'); //Para operaciones con la cartelera
 var peliculaCtrl = require("./servidor/controladores/peliculaCtrl"); //Operaciones de insersión, edición de una nueva pelicula
 var cineCtrl = require("./servidor/controladores/cinemasCtrl");
-var usuariCtrl = require("./servidor/controladores/usuarioCtrl");
-var registroCtrl=require("./servidor/controladores/registroCtrl");
+var usuarioCtrl = require("./servidor/controladores/usuarioCtrl");
+
 app.use(bodyParser.json());
 /*-- Directorios Estaticos --*/
 app.use('/cliente', express.static(__dirname + "/cliente")); 
@@ -29,11 +29,12 @@ app.get('/api/cines/listar', cineCtrl.listarCinemas); //Listar cines
 app.post('/api/pelicula/get', peliculaCtrl.obtenerPelicula);  //Obtener una pelicula con el id
 
 //autenticacion
-app.post('/api/usuario/login', usuariCtrl.login);
+app.post('/api/usuario/login', usuarioCtrl.login);
 
 //Registro
+app.post('/api/usuario/registro' , usuarioCtrl.registro);
 //app.post('/api/registro/consultar',registroCtrl.consultar);// Se garantiza la unicidad de usuarios
-//app.post('/api/registro/consultar',registroCtrl.registrar);//Se hace el registro de usuario
+//app.post('/api/registro/registrar',registroCtrl.registrar);//Se hace el registro de usuario
 
 /*-- Corro el servidor --*/
 
