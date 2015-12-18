@@ -8,7 +8,7 @@ var express = require("express"),
 var app = express();
 
 /*-- Controladores del servidor --*/
-var ctrlCartelera = require('./servidor/controladores/ctrlCartelera'); //Para operaciones con la cartelera
+var ctrlCartelera = require('./servidor/controladores/carteleraCtrl'); //Para operaciones con la cartelera
 var peliculaCtrl = require("./servidor/controladores/peliculaCtrl"); //Operaciones de insersión, edición de una nueva pelicula
 var cineCtrl = require("./servidor/controladores/cinemasCtrl");
 var usuarioCtrl = require("./servidor/controladores/usuarioCtrl");
